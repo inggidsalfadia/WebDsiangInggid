@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ST Bhinneka - Formulir Pengguna</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .menu-navigasi {
+            margin-bottom: 20px;
+        }
+        .menu-navigasi ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu-navigasi li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .form-pengguna label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-pengguna input[type="text"],
+        .form-pengguna input[type="password"],
+        .form-pengguna textarea,
+        .form-pengguna select {
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .form-pengguna input[type="radio"],
+        .form-pengguna input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-pengguna input[type="submit"] {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src=c:\Users\USER\Downloads\download.png
+            <h1>ST Bhinneka</h1>
+            <p>UNIVERSITAS SATYA TERRA BHINNEKA</p>
+        </div>
+        <div class="menu-navigasi">
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+            </ul>
+        </div>
+        <div class="form-pengguna">
+            <h2>Formulir Pengguna</h2>
+            <form action="#" method="post">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama"><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br>
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat"></textarea><br>
+                <label>Jenis Kelamin:</label>
+                <input type="radio" id="laki-laki" name="jenis_kelamin" value="laki-laki">
+                <label for="laki-laki">Laki-laki</label>
+                <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan">
+                <label for="perempuan">Perempuan</label><br>
+                <label for="usia">Usia:</label>
+                <input type="text" id="usia" name="usia"><br>
+                <label>Hobi:</label>
+                <input type="checkbox" id="olahraga" name="hobi[]" value="olahraga">
+                <label for="olahraga">Olahraga</label>
+                <input type="checkbox" id="musik" name="hobi[]" value="musik">
+                <label for="musik">Musik</label>
+                <input type="checkbox" id="membaca" name="hobi[]" value="membaca">
+                <label for="membaca">Membaca</label><br>
+                <label for="gambar">Pilih Gambar:</label>
+                <input type="file" id="gambar" name="gambar"><br>
+                <label for="tanggal_lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
