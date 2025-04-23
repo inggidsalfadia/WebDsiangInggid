@@ -1,0 +1,206 @@
+body {
+  font-family: sans-serif;
+  margin: 0; /* Reset margin default body */
+  background-color: #f4f4f4; /* Background dasar halaman */
+  color: #333;
+}
+
+/* Header dan Navigasi */
+header {
+  background-color: #222; /* Background header */
+  color: #fff;
+  padding: 1em 0; /* Padding atas dan bawah header */
+}
+
+.main-nav {
+  display: flex; /* Menggunakan Flexbox untuk layout navigasi */
+  justify-content: space-between; /* Spasi antara logo dan menu */
+  align-items: center; /* Vertikal align item di tengah */
+  padding: 0 20px; /* Padding kiri dan kanan navigasi */
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Menggunakan Flexbox untuk layout menu */
+}
+
+.menu li {
+  margin-left: 20px; /* Margin kiri antar item menu */
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em; /* Padding pada link menu */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+  background-color: #555;
+}
+
+/* Main Content */
+.container {
+  max-width: 1200px;
+  margin: 20px auto; /* Margin atas bawah dan auto untuk tengah horizontal */
+  padding: 20px; /* Padding di dalam container */
+  background-color: #fff; /* Background container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek shadow pada container */
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("img/hero_coffee.jpg"); /* Gambar latar belakang hero */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px; /* Padding besar untuk hero section */
+  text-align: center;
+  margin-bottom: 30px; /* Margin bawah hero section */
+}
+
+.hero-content {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Background semi-transparan untuk teks hero */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  margin-top: 0; /* Reset margin atas heading hero */
+  margin-bottom: 15px;
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  background-color: #d35400; /* Warna tombol */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Article Section */
+.article-section {
+  margin-bottom: 30px; /* Margin bawah section artikel */
+  padding: 20px; /* Padding di dalam section artikel */
+}
+
+.article-section h2 {
+  margin-top: 0; /* Reset margin atas heading artikel */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.article-grid {
+  display: grid; /* Menggunakan Grid untuk layout artikel */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Membuat grid responsif */
+  gap: 20px; /* Jarak antar item grid */
+}
+
+.article-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.article-card h3 {
+  margin: 15px; /* Margin di sekitar heading card artikel */
+}
+
+.article-card p {
+  margin: 0 15px 15px; /* Margin bawah dan samping paragraf card artikel */
+  line-height: 1.6;
+}
+
+/* Call to Action Section */
+.call-to-action {
+  background-color: #34495e; /* Background section CTA */
+  color: #fff;
+  padding: 50px 20px; /* Padding besar untuk section CTA */
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px; /* Margin bawah section CTA */
+}
+
+.call-to-action h2 {
+  margin-top: 0; /* Reset margin atas heading CTA */
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.call-to-action p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.call-to-action form {
+  display: flex; /* Menggunakan Flexbox untuk form */
+  max-width: 500px;
+  margin: 0 auto; /* Tengah horizontal form */
+}
+
+.call-to-action input[type="email"] {
+  flex-grow: 1; /* Input mengisi sisa ruang */
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1em;
+}
+
+.call-to-action button[type="submit"] {
+  background-color: #e67e22; /* Warna tombol submit */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action button[type="submit"]:hover {
+  background-color: #d35400;
+}
+
+/* Footer */
+footer {
+  background-color: #222; /* Background footer */
+  color: #fff;
+  text-align: center;
+  padding: 1em 0; /* Padding atas dan bawah footer */
+  font-size: 0.9em;
+}
