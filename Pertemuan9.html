@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi Bilangan Desimal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      .converter-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 90%;
+        max-width: 500px;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 25px;
+      }
+      .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+      }
+      input[type="number"] {
+        width: calc(100% - 22px); /* Adjust for padding and border */
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .results {
+        margin-top: 25px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+        text-align: left;
+      }
+      .results p {
+        margin: 10px 0;
+        font-size: 1.1em;
+        color: #333;
+      }
+      .results span {
+        font-weight: bold;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="converter-container">
+      <h1>Konverter Bilangan Desimal</h1>
+
+      <div class="input-group">
+        <label for="decimalInput">Masukkan Bilangan Desimal:</label>
+        <input type="number" id="decimalInput" placeholder="Contoh: 255" />
+      </div>
+
+      <button onclick="convertDecimal()">Konversi</button>
+
+      <div class="results" id="conversionResults">
+        <p>Biner: <span id="binaryOutput">-</span></p>
+        <p>Oktal: <span id="octalOutput">-</span></p>
+        <p>Heksadesimal: <span id="hexOutput">-</span></p>
+      </div>
+    </div>
+
+    <script>
+      function convertDecimal() {
+        const decimalInput = document.getElementById("decimalInput");
+        const decimalValue = parseInt(decimalInput.value);
+
+        // Validasi input
+        if (isNaN(decimalValue) || decimalValue < 0) {
+          alert(
+            "Masukkan bilangan desimal yang valid (bilangan bulat positif)."
+          );
+          clearResults();
+          return;
+        }
+
+        // Panggil fungsi konversi
+        const binaryResult = convertToBinary(decimalValue);
+        const octalResult = convertToOctal(decimalValue);
+        const hexResult = convertToHexadecimal(decimalValue);
+
+        // Tampilkan hasil
+        document.getElementById("binaryOutput").textContent = binaryResult;
+        document.getElementById("octalOutput").textContent = octalResult;
+        document.getElementById("hexOutput").textContent = hexResult;
+      }
+
+      function convertToBinary(decimal) {
+        // Menggunakan method toString(2) untuk konversi ke biner
+        return decimal.toString(2);
+      }
+
+      function convertToOctal(decimal) {
+        // Menggunakan method toString(8) untuk konversi ke oktal
+        return decimal.toString(8);
+      }
+
+      function convertToHexadecimal(decimal) {
+        // Menggunakan method toString(16) untuk konversi ke heksadesimal
+        // toUpperCase() agar huruf heksa menjadi kapital
+        return decimal.toString(16).toUpperCase();
+      }
+
+      function clearResults() {
+        document.getElementById("binaryOutput").textContent = "-";
+        document.getElementById("octalOutput").textContent = "-";
+        document.getElementById("hexOutput").textContent = "-";
+      }
+    </script>
+  </body>
+</html>
